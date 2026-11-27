@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- =====================================================================
+       SEO DASAR
+       Semua metadata ditulis sebagai tag HTML biasa (tanpa JSON-LD / script).
+       Ganti URL canonical & og:url dengan alamat asli setelah situs online.
+       ===================================================================== -->
+  <title>Tribute Lily JKT48 — Member 1000 Wajah | Habib Muzakki Piliang</title>
+  <meta name="description" content="Halaman penghormatan Lily JKT48 (Hillary Abigail Mantiri): Member 1000 Wajah, soft-spoken gamer, dan kenangan Generasi 12. Karya Habib Muzakki Piliang.">
+  <meta name="keywords" content="Lily JKT48, Hillary Abigail Mantiri, Lily 1000 Wajah, Lily Gen 12, tribute Lily JKT48, kelulusan Lily JKT48, Hillaryours, Habib Muzakki Piliang, JKT48">
+  <meta name="author" content="Habib Muzakki Piliang">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://habibmuzakkipiliang.github.io/lily-jkt48-tribute/">
+
+  <!-- =====================================================================
+       OPEN GRAPH (untuk tampilan saat tautan dibagikan)
+       ===================================================================== -->
+  <meta property="og:title" content="Tribute Lily JKT48 — Member 1000 Wajah">
+  <meta property="og:description" content="Penghormatan untuk Lily JKT48 (Hillary Abigail Mantiri): soft-spoken gamer, Member 1000 Wajah, dan kenangan indah Generasi 12.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://habibmuzakkipiliang.github.io/lily-jkt48-tribute/">
+  <meta property="og:site_name" content="Untuk Lily — Tribute JKT48">
+  <meta property="og:locale" content="id_ID">
+
+  <!-- =====================================================================
+       TWITTER CARD (tanpa gambar agar tetap ringan)
+       ===================================================================== -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Tribute Lily JKT48 — Member 1000 Wajah">
+  <meta name="twitter:description" content="Halaman penghormatan untuk Lily JKT48 (Hillary Abigail Mantiri): soft-spoken gamer dan kenangan Generasi 12.">
+
+  <!-- Warna bilah browser mengikuti tema perangkat -->
+  <meta name="theme-color" content="#f8f2f5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0b0f1a" media="(prefers-color-scheme: dark)">
+
+  <!-- Ikon kecil (SVG ditanam langsung, tanpa file tambahan) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23b6426d'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='36' font-weight='700' text-anchor='middle' fill='%23ffffff'%3EL%3C/text%3E%3C/svg%3E">
+
+  <!-- Sambungkan lebih cepat ke CDN Bootstrap -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+
+  <!-- Bootstrap 5.3 — HANYA file CSS. Tidak ada bundle JavaScript. -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+
+  <!-- CSS utama buatan sendiri -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- =====================================================================
+       PENGALIH TEMA 100% CSS (TANPA JAVASCRIPT)
+       Tiga radio tersembunyi di awal <body>. Urutannya WAJIB berada
+       sebelum .page-wrapper karena CSS memakai selector:
+         #theme-dark:checked ~ .page-wrapper { ... }
+       Tombol pill di navbar hanyalah <label for="..."> yang terhubung
+       ke radio di bawah ini.
+       ===================================================================== -->
+  <input class="theme-input" type="radio" name="theme-mode" id="theme-auto" checked>
+  <input class="theme-input" type="radio" name="theme-mode" id="theme-light">
+  <input class="theme-input" type="radio" name="theme-mode" id="theme-dark">
+
+  <!-- Seluruh isi situs dibungkus .page-wrapper agar tema bisa diatur -->
+  <div class="page-wrapper">
+
+    <!-- Tautan lompat untuk pengguna keyboard / pembaca layar -->
+    <a class="skip-link" href="#konten">Lewati ke konten utama</a>
+
+    <!-- ===================================================================
+         1. NAVBAR
+         Pakai flexbox CSS (bukan navbar Bootstrap) supaya tidak butuh JS.
+         =================================================================== -->
+    <header class="site-header">
+      <div class="container nav-shell">
+
+        <!-- Logo / judul tribute -->
+        <a class="brand" href="#atas" aria-label="Untuk Lily — kembali ke atas">
+          <span class="brand-mark" aria-hidden="true">L</span>
+          <span class="brand-text">
+            <strong>Untuk Lily</strong>
+            <small>Tribute JKT48</small>
+          </span>
+        </a>
+
+        <!-- Navigasi utama (disembunyikan di layar sangat kecil) -->
+        <nav class="nav-links" aria-label="Navigasi utama">
+          <a href="#tentang">Tentang</a>
+          <a href="#kenangan">15 Kenangan</a>
+          <a href="#fakta">15 Fakta</a>
+          <a href="#pembuat">Pembuat</a>
+        </nav>
+
+        <!-- Tombol pill pengalih tema. for="" harus sama dengan id radio. -->
+        <div class="theme-switch" role="group" aria-label="Pilih mode tema">
+          <label class="theme-pill" for="theme-auto">Otomatis</label>
+          <label class="theme-pill" for="theme-light">Terang</label>
+          <label class="theme-pill" for="theme-dark">Gelap</label>
+        </div>
+
+      </div>
+    </header>
+
+    <main id="konten">
+
+      <!-- =================================================================
+           2. HERO
+           Judul utama + ringkasan + tautan sosial + kartu profil singkat.
+           ================================================================= -->
+      <section class="hero" id="atas" aria-labelledby="hero-title">
+        <div class="container hero-grid">
+
+          <!-- Kolom teks -->
+          <div class="hero-copy">
+            <p class="eyebrow">Penghormatan untuk Lily JKT48 (Hillary Abigail)</p>
+
+            <h1 id="hero-title">
+              Member <span class="text-accent">1000 Wajah</span>, Soft-Spoken Gamer, &amp; Kenangan Indah di JKT48
+            </h1>
+
+            <p class="hero-desc">
+              Sebuah halaman penghormatan untuk Hillary Abigail Mantiri — Lily JKT48.
+              Dari panggung teater hingga sesi live, dari tawa di balik simbal hingga
+              pidato kelulusan 26 November 2026: ruang kecil untuk merawat kenangan
+              dan mengucapkan terima kasih.
+            </p>
+
+            <!-- Tautan resmi / kanal Lily dan fanbase -->
+            <div class="hero-actions">
+              <a class="btn-soft btn-primary-soft" href="https://www.instagram.com/jkt48.lily_/" target="_blank" rel="noopener noreferrer">
+                Instagram Lily
+              </a>
+              <a class="btn-soft" href="https://x.com/Lily_JKT48" target="_blank" rel="noopener noreferrer">
+                X Lily
+              </a>
+              <a class="btn-soft" href="https://hillaryours.id/" target="_blank" rel="noopener noreferrer">
+                Fanbase Hillaryours
+              </a>
+            </div>
+
+            <!-- Ringkasan angka penting, ditulis sebagai daftar semantik -->
+            <ul class="hero-stats" aria-label="Ringkasan singkat Lily">
+              <li>
+                <span class="stat-value">Gen 12</span>
+                <span class="stat-label">Generasi</span>
+              </li>
+              <li>
+                <span class="stat-value">2007</span>
+                <span class="stat-label">Tahun lahir</span>
+              </li>
+              <li>
+                <span class="stat-value">1000 Wajah</span>
+                <span class="stat-label">Julukan</span>
+              </li>
+              <li>
+                <span class="stat-value">26 Nov 2026</span>
+                <span class="stat-label">Kelulusan</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Kartu profil ringkas bergaya kaca (glassmorphism) -->
+          <aside class="hero-card" aria-label="Kartu profil singkat Lily JKT48">
+            <div class="monogram" aria-hidden="true">L</div>
+            <h2>Lily JKT48</h2>
+            <p class="hero-card-name">Hillary Abigail Mantiri</p>
+
+            <dl class="mini-facts">
+              <div>
+                <dt>Lahir</dt>
+                <dd>Dover, New Hampshire, AS</dd>
+              </div>
+              <div>
+                <dt>Tanggal</dt>
+                <dd>19 Oktober 2007</dd>
+              </div>
+              <div>
+                <dt>Generasi</dt>
+                <dd>Gen 12</dd>
+              </div>
+              <div>
+                <dt>Kelulusan</dt>
+                <dd>26 November 2026</dd>
+              </div>
+            </dl>
+
+            <p class="hero-note">“Soft-spoken di luar panggung, seribu wajah di atasnya.” — catatan penggemar</p>
+          </aside>
+
+        </div>
+      </section>
+
+      <!-- =================================================================
+           3. BIOGRAFI, ASAL USUL, KELULUSAN & SAHABAT
+           Disusun sebagai bento grid: kartu lebar + kartu tinggi.
+           ================================================================= -->
+      <section class="section" id="tentang" aria-labelledby="tentang-title">
+        <div class="container">
+
+          <header class="section-head">
+            <p class="eyebrow">Tentang Lily</p>
+            <h2 id="tentang-title">Akar, Perjalanan, dan Perpisahan</h2>
+            <p class="section-intro">
+              Perjalanan Lily di JKT48 adalah cerita tentang kelembutan yang punya kekuatan.
+              Berikut latar belakang, alasan kelulusan, dan lingkaran sahabat yang menemaninya.
+            </p>
+          </header>
+
+          <div class="bento">
+
+            <!-- Kartu lebar: siapa Lily -->
+            <article class="glass-card bento-wide" aria-labelledby="bio-title">
+              <h3 class="card-title" id="bio-title">Siapa Lily?</h3>
+              <p>
+                <strong>Hillary Abigail Mantiri</strong>, akrab disapa Lily, adalah anggota
+                JKT48 Generasi 12. Di panggung ia dikenal sebagai <em>Member 1000 Wajah</em>:
+                ekspresif tanpa kehilangan ketenangan. Di luar panggung, Lily dikenal
+                soft-spoken, ramah, dan dekat dengan dunia anime maupun game.
+              </p>
+              <ul class="chip-row" aria-label="Ciri khas Lily">
+                <li class="chip">Soft-spoken</li>
+                <li class="chip">Member 1000 Wajah</li>
+                <li class="chip">Gamer</li>
+                <li class="chip">Wibu</li>
+                <li class="chip">Pecinta Kimia</li>
+              </ul>
+            </article>
+
+            <!-- Kartu tinggi: kelahiran dan latar belakang -->
+            <article class="glass-card bento-tall" aria-labelledby="asal-title">
+              <h3 class="card-title" id="asal-title">Akar &amp; Kelahiran</h3>
+              <dl class="detail-list">
+                <div>
+                  <dt>Tempat lahir</dt>
+                  <dd>Dover, New Hampshire, Amerika Serikat</dd>
+                </div>
+                <div>
+                  <dt>Tanggal lahir</dt>
+                  <dd>19 Oktober 2007</dd>
+                </div>
+                <div>
+                  <dt>Latar belakang</dt>
+                  <dd>Keturunan Indonesia-Amerika</dd>
+                </div>
+                <div>
+                  <dt>Generasi</dt>
+                  <dd>Generasi 12 JKT48</dd>
+                </div>
+              </dl>
+              <p class="card-note">Dua budaya, satu panggung: Indonesia dan Amerika Serikat.</p>
+            </article>
+
+            <!-- Kartu lebar: alasan kelulusan -->
+            <article class="glass-card bento-wide" aria-labelledby="lulus-title">
+              <h3 class="card-title" id="lulus-title">Alasan Kelulusan</h3>
+              <p>
+                Pada <strong>26 November 2026</strong>, Lily resmi menutup perjalanannya
+                sebagai anggota JKT48. Keputusan itu diambil dengan mempertimbangkan
+                kondisi kesehatan yang perlu dijaga serta keinginan untuk fokus pada masa depan.
+              </p>
+              <p>
+                Kabar kelulusan disambut haru sekaligus doa. Wota memilih merayakan kenangan
+                daripada hanya meratapi perpisahan.
+              </p>
+              <p class="highlight-line">26 November 2026 — satu bab ditutup, doa baru dimulai.</p>
+            </article>
+
+            <!-- Kartu lebar: sahabat satu generasi -->
+            <article class="glass-card bento-wide" aria-labelledby="sahabat-title">
+              <h3 class="card-title" id="sahabat-title">Sahabat Satu Generasi (Gen 12)</h3>
+              <p>
+                Kedekatan Lily dengan rekan satu generasi menjadi warna tersendiri.
+                Duo <strong>#FriLy</strong> bersama Fritzy termasuk yang paling sering
+                dibicarakan wota.
+              </p>
+              <ul class="chip-row" aria-label="Sahabat satu generasi">
+                <li class="chip chip-highlight">Fritzy (#FriLy)</li>
+                <li class="chip">Erine</li>
+                <li class="chip">Oline</li>
+                <li class="chip">Nayla</li>
+                <li class="chip">Aralie</li>
+                <li class="chip">Trisha</li>
+                <li class="chip">Delynn</li>
+              </ul>
+            </article>
+
+            <!-- Kartu biasa: sahabat lintas generasi -->
+            <article class="glass-card" aria-labelledby="lintas-title">
+              <h3 class="card-title" id="lintas-title">Sahabat Lintas Generasi</h3>
+              <p>
+                Lily juga dekat dengan senior dan junior lintas generasi. Kelembutannya
+                mudah diterima, dan ia dihormati banyak pihak.
+              </p>
+              <ul class="chip-row" aria-label="Sahabat lintas generasi">
+                <li class="chip">Shani</li>
+                <li class="chip">Jessi</li>
+                <li class="chip">Kathrina</li>
+                <li class="chip">Freya</li>
+                <li class="chip">Olla</li>
+              </ul>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- =================================================================
+           4. GRID 15 KENANGAN IKONIK
+           Kartu bisa "dibuka" lewat hover atau fokus keyboard (Tab).
+           Di layar sentuh, detail ditampilkan otomatis lewat media query.
+           ================================================================= -->
+      <section class="section" id="kenangan" aria-labelledby="kenangan-title">
+        <div class="container">
+
+          <header class="section-head">
+            <div class="head-row">
+              <div>
+                <p class="eyebrow">Galeri Kenangan</p>
+                <h2 id="kenangan-title">15 Kenangan Ikonik Lily JKT48</h2>
+              </div>
+              <span class="count-badge">15 momen</span>
+            </div>
+            <p class="section-intro">
+              Lima belas momen yang paling sering dikenang wota — dari panggung teater,
+              IDN Live, sampai pidato perpisahan. Arahkan kursor atau tekan Tab pada
+              kartu untuk membaca detailnya.
+            </p>
+          </header>
+
+          <div class="tile-grid">
+
+            <!-- 01 -->
+            <article class="tile" tabindex="0">
+              <span class="tile-number">01</span>
+              <h3>Lily Simbal</h3>
+              <p class="tile-lead">Simbal yang bergerak seirama tawa.</p>
+              <p class="tile-detail">
+                Di panggung, Lily memainkan simbal dengan ekspresif. Bagi wota,
+                bunyinya seperti penanda bahwa Lily sedang menikmati momen.
+              </p>
+            </article>
+
+            <!-- 02 -->
+            <article class="tile" tabindex="0">
+              <span class="tile-number">02</span>
+              <h3>Lily Selayar di IDN Live</h3>
+              <p class="tile-lead">Julukan manis yang lahir dari siaran live.</p>
+              <p class="tile-detail">
+                Sesi IDN Live menampilkan Lily yang santai dan cair. Julukan
+                “Lily Selayar” tumbuh dari obrolan wota dan bertahan sebagai kenangan lucu.
+              </p>
+            </article>
+
+            <!-- 03 -->
+            <article class="tile" tabindex="0">
+              <span class="tile-number">03</span>
+              <h3>Jikoshoukai Angela</h3>
+              <p class="tile-lead">Perkenalan yang langsung melekat.</p>
+              <p class="tile-detail">
+                Jikoshoukai dengan kata “Angela” jadi ciri khas Lily: singkat, lembut,
+                tetapi mudah diingat siapa pun yang baru mengenalnya.
+              </p>
+            </article>
+
+            <!-- 04 -->
+            <article class="tile" tabindex="0">
+              <span class="tile-number">04</span>
+              <h3>Member 1000 Wajah</h3>
+              <p class="tile-lead">Satu orang, seribu ekspresi.</p>
+              <p class="tile-detail">
+                Dari senyum malu sampai tatapan jahil, perubahan wajah Lily di panggung
+                dan konten adalah alasan julukan ini melekat.
+              </p>
+            </article>
+
+            <!-- 05 -->
+            <article class="tile" tabindex="0">
+              <span class="tile-number">05</span>
+              <h3>Duet #FriLy</h3>
+              <p class="tile-lead">Fritzy dan Lily, chemistry yang ringan.</p>
+              <p class="tile-detail">
+                Kebersamaan Lily dengan Fritzy di panggung dan konten membuat wota akrab
+                dengan sebutan #FriLy. Momen kecil mereka selalu terasa hangat.
+              </p>
+            </article>
+
+            <!-- 06 -->
+            <article class="tile" tabindex="0">
+              <span class="tile-number">06</span>
+              <h3>Panggung Perdana Generasi 12</h3>
+              <p class="tile-lead">Awal dari perjalanan panggung.</p>
+              <p class="tile-detail">
+                Debut teater Generasi 12 menjadi titik pertama Lily memperkenalkan diri:
+                gugup, senyum kecil, dan tepuk tangan panjang wota.
+              </p>
+            </article>
+
+            <!-- 07 -->
+            <article class="tile" tabindex="0">
+              <span class="tile-number">07</span>
+              <h3>MC Soft-Spoken</h3>
+              <p class="tile-lead">Suara lembut yang menenangkan.</p>
+              <p class="tile-detail">
+                Saat memandu acara, Lily berbicara pelan dan jelas. Suasananya hangat,
+                tanpa kehilangan energi.
+              </p>
+            </article>
+
+            <!-- 08 -->
+            <article class="tile" tabindex="0">
+              <span class="tile-number">08</span>
+              <h3>Malam Gaming di IDN Live</h3>
+              <p class="tile-lead">Mobile Legends dan Free Fire bareng wota.</p>
+              <p class="tile-detail">
+                Sesi live gaming memperlihatkan sisi Lily sebagai gamer: fokus, kompak,
+                dan sesekali jahil saat bermain.
+              </p>
+            </article>
+
+            <!-- 09 -->
+            <article class="tile" tabindex="0">
+              <span class="tile-number">09</span>
+              <h3>Senyum di Sesi Hands On</h3>
+              <p class="tile-lead">Malu-malu, tapi hangat.</p>
+              <p class="tile-detail">
+                Di meja hands on, Lily menyapa wota satu per satu dengan sopan.
+                Tawa kecil dan tatapan ramahnya sering dikenang.
+              </p>
+            </article>
+
+            <!-- 10 -->
+            <article class="tile" tabindex="0">
+              <span class="tile-number">10</span>
+              <h3>Ulang Tahun di Panggung</h3>
+              <p class="tile-lead">19 Oktober yang dirayakan bersama.</p>
+              <p class="tile-detail">
+                Perayaan ulang tahun di tengah wota menjadi kejutan kecil:
+                lagu, kue, dan doa untuk Lily.
+              </p>
+            </article>
+
+            <!-- 11 -->
+            <article class="tile" tabindex="0">
+              <span class="tile-number">11</span>
+              <h3>Panggung Lintas Generasi</h3>
+              <p class="tile-lead">Dihormati senior, disayang junior.</p>
+              <p class="tile-detail">
+                Kebersamaan dengan Shani, Jessi, Kathrina, dan Freya menunjukkan
+                bahwa kelembutan Lily diterima banyak generasi.
+              </p>
+            </article>
+
+            <!-- 12 -->
+            <article class="tile" tabindex="0">
+              <span class="tile-number">12</span>
+              <h3>Obrolan Kimia</h3>
+              <p class="tile-lead">Sisi akademis yang menggemaskan.</p>
+              <p class="tile-detail">
+                Lily menyukai kimia. Obrolan pelajaran di konten dan live menjadi
+                sisi lain yang membuat wota terkesan.
+              </p>
+            </article>
+
+            <!-- 13 -->
+            <article class="tile" tabindex="0">
+              <span class="tile-number">13</span>
+              <h3>Brachiosaurus dan Kuda</h3>
+              <p class="tile-lead">Dunia kecil penuh rasa ingin tahu.</p>
+              <p class="tile-detail">
+                Koleksi Brachiosaurus dan hobi berkuda adalah cerita favorit wota:
+                dua hal sederhana yang memperlihatkan sisi playful Lily.
+              </p>
+            </article>
+
+            <!-- 14 -->
+            <article class="tile" tabindex="0">
+              <span class="tile-number">14</span>
+              <h3>Hillaryours</h3>
+              <p class="tile-lead">Rumah bagi para penggemar.</p>
+              <p class="tile-detail">
+                Fanbase Hillaryours merayakan setiap momen Lily. Proyek bersama mereka
+                membuktikan bahwa kenangan tumbuh dari kebersamaan.
+              </p>
+            </article>
+
+            <!-- 15 -->
+            <article class="tile" tabindex="0">
+              <span class="tile-number">15</span>
+              <h3>Pidato Kelulusan 26 November 2026</h3>
+              <p class="tile-lead">Kata-kata yang menutup satu bab.</p>
+              <p class="tile-detail">
+                Pidato perpisahan Lily menyentuh hati: terima kasih untuk wota, tim,
+                dan sahabat, sekaligus doa untuk langkah berikutnya.
+              </p>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- =================================================================
+           5. GRID 15 FAKTA UNIK
+           Struktur kartu sama dengan kenangan, jadi gaya CSS-nya dipakai ulang.
+           ================================================================= -->
+      <section class="section" id="fakta" aria-labelledby="fakta-title">
+        <div class="container">
+
+          <header class="section-head">
+            <div class="head-row">
+              <div>
+                <p class="eyebrow">Sisi Unik</p>
+                <h2 id="fakta-title">15 Fakta Unik Lily JKT48</h2>
+              </div>
+              <span class="count-badge">15 fakta</span>
+            </div>
+            <p class="section-intro">
+              Di balik kesan pendiam, Lily menyimpan banyak hal menarik.
+              Lima belas fakta berikut merangkum sisi unik yang membuatnya mudah diingat.
+            </p>
+          </header>
+
+          <div class="tile-grid">
+
+            <!-- 01 -->
+            <article class="tile" tabindex="0">
+              <span class="tile-number">01</span>
+              <h3>Kelahiran Amerika Serikat Pertama</h3>
+              <p class="tile-lead">Lahir di Dover, New Hampshire.</p>
+              <p class="tile-detail">
+                Lily tercatat sebagai anggota JKT48 pertama yang lahir di Amerika Serikat.
+              </p>
+            </article>
+
+            <!-- 02 -->
+            <article class="tile" tabindex="0">
+              <span class="tile-number">02</span>
+              <h3>Keturunan Indonesia-Amerika</h3>
+              <p class="tile-lead">Tumbuh dalam dua budaya sekaligus.</p>
+              <p class="tile-detail">
+                Bahasa dan kebiasaan Indonesia maupun Amerika mewarnai kesehariannya.
+              </p>
+            </article>
+
+            <!-- 03 -->
+            <article class="tile" tabindex="0">
+              <span class="tile-number">03</span>
+              <h3>Anggota Generasi 12</h3>
+              <p class="tile-lead">Salah satu wajah baru JKT48.</p>
+              <p class="tile-detail">
+                Lily bergabung sebagai anggota Generasi 12 dan diperkenalkan ke wota
+                sebagai bagian dari generasi tersebut.
+              </p>
+            </article>
+
+            <!-- 04 -->
+            <article class="tile" tabindex="0">
+              <span class="tile-number">04</span>
+              <h3>Soft-Spoken</h3>
+              <p class="tile-lead">Bicara pelan, sopan, dan menenangkan.</p>
+              <p class="tile-detail">
+                “Soft-spoken” adalah kata yang paling sering dipakai wota untuknya.
+              </p>
+            </article>
+
+            <!-- 05 -->
+            <article class="tile" tabindex="0">
+              <span class="tile-number">05</span>
+              <h3>Wibu dan Penggemar Anime</h3>
+              <p class="tile-lead">Anime adalah dunianya.</p>
+              <p class="tile-detail">
+                Energi wibu sering muncul dalam obrolan live dan konten-konten Lily.
+              </p>
+            </article>
+
+            <!-- 06 -->
+            <article class="tile" tabindex="0">
+              <span class="tile-number">06</span>
+              <h3>Gamer Mobile Legends</h3>
+              <p class="tile-lead">Fokus saat bermain.</p>
+              <p class="tile-detail">
+                Mobile Legends menjadi salah satu permainan favoritnya, terutama
+                saat sesi gaming bersama wota.
+              </p>
+            </article>
+
+            <!-- 07 -->
+            <article class="tile" tabindex="0">
+              <span class="tile-number">07</span>
+              <h3>Gamer Free Fire</h3>
+              <p class="tile-lead">Juga jago di Free Fire.</p>
+              <p class="tile-detail">
+                Free Fire masuk daftar game favorit; momen bermain bareng teman
+                selalu ditunggu wota.
+              </p>
+            </article>
+
+            <!-- 08 -->
+            <article class="tile" tabindex="0">
+              <span class="tile-number">08</span>
+              <h3>Kolektor Brachiosaurus</h3>
+              <p class="tile-lead">Dinosaurus leher panjang.</p>
+              <p class="tile-detail">
+                Mengoleksi dinosaurus Brachiosaurus — fakta unik yang langsung
+                membuatnya berbeda.
+              </p>
+            </article>
+
+            <!-- 09 -->
+            <article class="tile" tabindex="0">
+              <span class="tile-number">09</span>
+              <h3>Hobi Berkuda</h3>
+              <p class="tile-lead">Tenang sekaligus menantang.</p>
+              <p class="tile-detail">
+                Berkuda cocok dengan karakter Lily yang tenang, tetapi tetap suka
+                mencoba hal baru.
+              </p>
+            </article>
+
+            <!-- 10 -->
+            <article class="tile" tabindex="0">
+              <span class="tile-number">10</span>
+              <h3>Suka Pelajaran Kimia</h3>
+              <p class="tile-lead">Rasa ingin tahu yang besar.</p>
+              <p class="tile-detail">
+                Kimia termasuk pelajaran favoritnya. Sisi akademis ini menarik
+                perhatian wota.
+              </p>
+            </article>
+
+            <!-- 11 -->
+            <article class="tile" tabindex="0">
+              <span class="tile-number">11</span>
+              <h3>Onigiri Tuna Mayo</h3>
+              <p class="tile-lead">Menu favorit yang sederhana.</p>
+              <p class="tile-detail">
+                Makanan favoritnya onigiri isi tuna mayo — detail kecil yang
+                terasa sangat Lily.
+              </p>
+            </article>
+
+            <!-- 12 -->
+            <article class="tile" tabindex="0">
+              <span class="tile-number">12</span>
+              <h3>Zodiak Libra</h3>
+              <p class="tile-lead">Lahir 19 Oktober 2007.</p>
+              <p class="tile-detail">
+                Lily berzodiak Libra — dikenal ramah dan suka keseimbangan.
+              </p>
+            </article>
+
+            <!-- 13 -->
+            <article class="tile" tabindex="0">
+              <span class="tile-number">13</span>
+              <h3>Member 1000 Wajah</h3>
+              <p class="tile-lead">Ekspresi yang cepat berubah.</p>
+              <p class="tile-detail">
+                Malu, ceria, jahil, haru. Julukan ini melekat karena memang
+                terlihat di panggung.
+              </p>
+            </article>
+
+            <!-- 14 -->
+            <article class="tile" tabindex="0">
+              <span class="tile-number">14</span>
+              <h3>Ramah kepada Wota</h3>
+              <p class="tile-lead">Tidak pelit senyum dan sapaan.</p>
+              <p class="tile-detail">
+                Banyak wota merasa diterima justru oleh sikap tenang dan ramahnya.
+              </p>
+            </article>
+
+            <!-- 15 -->
+            <article class="tile" tabindex="0">
+              <span class="tile-number">15</span>
+              <h3>Fanbase Hillaryours</h3>
+              <p class="tile-lead">Penggemar yang merawat kenangan.</p>
+              <p class="tile-detail">
+                Hillaryours aktif merawat kenangan dan mendukung setiap langkah Lily.
+              </p>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- =================================================================
+           6. PROFIL PEMBUAT WEBSITE
+           Kartu profil + tautan kontak dalam bentuk "link chip".
+           ================================================================= -->
+      <section class="section" id="pembuat" aria-labelledby="pembuat-title">
+        <div class="container">
+
+          <header class="section-head">
+            <p class="eyebrow">Pembuat Situs</p>
+            <h2 id="pembuat-title">Di Balik Halaman Ini</h2>
+            <p class="section-intro">
+              Tribute ini dirancang dan ditulis oleh seorang penggemar yang juga
+              belajar menjadi pengembang web: Habib Muzakki Piliang.
+            </p>
+          </header>
+
+          <div class="creator-grid">
+
+            <!-- Kartu profil utama -->
+            <article class="glass-card creator-card" aria-labelledby="habib-title">
+              <div class="profile-head">
+                <div class="monogram monogram-sm" aria-hidden="true">H</div>
+                <div>
+                  <h3 id="habib-title">Habib Muzakki Piliang</h3>
+                  <p class="profile-role">Junior Web Developer &amp; Bug Hunter</p>
+                </div>
+              </div>
+
+              <p class="profile-bio">
+                Habib adalah mahasiswa D4 Vokasi Teknik Informatika Universitas Harkat
+                Negeri (UHN) Tegal angkatan 2026. Lahir pada 2007 di Kota Serang, Banten,
+                ia merupakan perantau Minangkabau-Piliang yang menekuni pengembangan web
+                dan keamanan aplikasi.
+              </p>
+
+              <ul class="profile-facts">
+                <li><strong>Pendidikan:</strong> D4 Vokasi Teknik Informatika, Universitas Harkat Negeri (UHN) Tegal — angkatan 2026.</li>
+                <li><strong>Asal:</strong> Kelahiran 2007 di Kota Serang, Banten; perantau Minangkabau-Piliang.</li>
+                <li><strong>Alumni:</strong> MAN 2 Kota Serang (2026).</li>
+                <li><strong>Prestasi:</strong> Finalis OSN-K Informatika 2025.</li>
+                <li><strong>Sertifikasi:</strong> Gemini AI Certified Student.</li>
+                <li><strong>Fokus:</strong> Junior Web Developer &amp; Bug Hunter (OWASP ZAP).</li>
+                <li><strong>Sebagai wota:</strong> Lily JKT48 adalah oshi ke-3.</li>
+              </ul>
+
+              <!-- Tautan langsung: email, GitHub, Linktree, LinkedIn, Instagram -->
+              <div class="creator-links">
+
+                <a class="link-chip" href="mailto:habibmuzakki03@gmail.com">
+                  <span class="chip-badge" aria-hidden="true">@</span>
+                  <span class="chip-text">
+                    <strong>Email</strong>
+                    <small>habibmuzakki03@gmail.com</small>
+                  </span>
+                </a>
+
+                <a class="link-chip" href="https://github.com/habibmuzakkipiliang" target="_blank" rel="noopener noreferrer">
+                  <span class="chip-badge" aria-hidden="true">GH</span>
+                  <span class="chip-text">
+                    <strong>GitHub</strong>
+                    <small>github.com/habibmuzakkipiliang</small>
+                  </span>
+                </a>
+
+                <a class="link-chip" href="https://linktr.ee/habib_muzakki_piliang" target="_blank" rel="noopener noreferrer">
+                  <span class="chip-badge" aria-hidden="true">LT</span>
+                  <span class="chip-text">
+                    <strong>Linktree</strong>
+                    <small>linktr.ee/habib_muzakki_piliang</small>
+                  </span>
+                </a>
+
+                <a class="link-chip" href="https://www.linkedin.com/in/habib-muzakki-piliang/" target="_blank" rel="noopener noreferrer">
+                  <span class="chip-badge" aria-hidden="true">in</span>
+                  <span class="chip-text">
+                    <strong>LinkedIn</strong>
+                    <small>linkedin.com/in/habib-muzakki-piliang</small>
+                  </span>
+                </a>
+
+                <a class="link-chip" href="https://www.instagram.com/habib_muzakki_piliang" target="_blank" rel="noopener noreferrer">
+                  <span class="chip-badge" aria-hidden="true">IG</span>
+                  <span class="chip-text">
+                    <strong>Instagram</strong>
+                    <small>@habib_muzakki_piliang</small>
+                  </span>
+                </a>
+
+              </div>
+            </article>
+
+            <!-- Kartu samping: alasan tribute -->
+            <aside class="glass-card oshi-card" aria-labelledby="oshi-title">
+              <p class="eyebrow">Oshi ke-3</p>
+              <h3 id="oshi-title">Lily JKT48</h3>
+              <p>
+                Lily adalah oshi ke-3: bukan soal urutan, melainkan cerita yang ingin
+                dirawat. Halaman ini menjadi cara kecil untuk berterima kasih.
+              </p>
+
+              <ul class="chip-row" aria-label="Teknologi yang dipakai">
+                <li class="chip">HTML5</li>
+                <li class="chip">CSS3</li>
+                <li class="chip">Bootstrap 5.3 CSS</li>
+                <li class="chip">Tanpa JavaScript</li>
+              </ul>
+
+              <p class="oshi-note">
+                Situs penggemar tidak resmi, dibuat dengan HTML semantik dan CSS murni
+                agar ringan, cepat, dan mudah dipelajari.
+              </p>
+            </aside>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- =================================================================
+           7. RANGKUMAN & KESIMPULAN
+           ================================================================= -->
+      <section class="section" id="penutup" aria-labelledby="penutup-title">
+        <div class="container">
+          <article class="glass-card closing-card">
+            <p class="eyebrow">Rangkuman &amp; Kesimpulan</p>
+            <h2 id="penutup-title">Kenangan yang Tidak Ikut Lulus</h2>
+            <p>
+              Lily mungkin telah menutup bab JKT48 pada 26 November 2026, tetapi
+              kenangan tidak ikut pulang. Simbal, senyum malu-malu, suara lembut saat
+              MC, tawa di sesi gaming, dan pidato perpisahan itu akan tetap tinggal
+              di ingatan wota.
+            </p>
+            <p>
+              Halaman ini adalah karya digital kecil dari seorang penggemar: cara
+              sederhana untuk merawat cerita, mengucapkan terima kasih, dan memastikan
+              nama Lily JKT48 tetap hangat. Terima kasih, Lily, untuk setiap momen.
+              Semoga langkah berikutnya selalu baik.
+            </p>
+            <a class="btn-soft" href="#atas">Kembali ke Atas</a>
+          </article>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ===================================================================
+         8. FOOTER
+         Teks kredit ditampilkan persis sesuai permintaan; setiap entitas
+         dan URL-nya menjadi tautan yang bisa diklik.
+         =================================================================== -->
+    <footer class="site-footer">
+      <div class="container">
+
+        <p class="footer-credit">
+          Kredit pembuatan oleh <a href="https://github.com/habibmuzakkipiliang" target="_blank" rel="noopener noreferrer">Habib Muzakki Piliang (https://github.com/habibmuzakkipiliang)</a> dengan sentuhan penghormatan untuk <a href="https://hillaryours.id/" target="_blank" rel="noopener noreferrer">Hillaryours (https://hillaryours.id/)</a>, <a href="https://www.instagram.com/jkt48.lily_/" target="_blank" rel="noopener noreferrer">Lily JKT48 (https://www.instagram.com/jkt48.lily_/)</a> &amp; <a href="https://www.instagram.com/jkt48/" target="_blank" rel="noopener noreferrer">JKT48 (https://www.instagram.com/jkt48/)</a>
+        </p>
+
+        <p class="footer-note">
+          Situs penggemar tidak resmi; bukan afiliasi JKT48.
+          Seluruh nama, citra, dan merek milik pemiliknya masing-masing.
+        </p>
+
+        <p class="footer-meta">
+          © 2026 Habib Muzakki Piliang · HTML5 + CSS3 murni, tanpa JavaScript.
+        </p>
+
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>
